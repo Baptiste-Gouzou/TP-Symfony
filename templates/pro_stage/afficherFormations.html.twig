@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body%}
+<h1> Cette page affichera la liste des formations de l'IUT </h1>
+
+<ul>
+  {% for formation in formations %}
+    <li><a class="formation" href="{{ path('stagesParFormation',{'nomFormation': formation.nom}) }}">{{formation.nom}}</a><li><a class="formation" href="{{ path('formation_new',{'id': formation.id}) }}">Ajouter</a>|<a class="formation" href="{{ path('formation_show',{'id': formation.id}) }}">voir</a>|<a class="formation" href="{{ path('formation_edit',{'id': formation.id}) }}">modifier</a>|<a class="formation" href="{{ path('formation_delete',{'id': formation.id}) }}">supprimmer</a>
+  {% endfor %}
+</ul>
+
+
+{% endblock %}

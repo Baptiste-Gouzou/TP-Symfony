@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+<center>
+{{ form_start ( vueFormulaireUser ) }}
+  <p>{{ form_row ( vueFormulaireUser.prenom, {'attr':{'placeholder':"votre prenom ..."}})}}</p>
+  <p>{{ form_row ( vueFormulaireUser.nom, {'attr':{'placeholder':"votre nom ..."}})}}</p>
+  <p>{{ form_row ( vueFormulaireUser.email, {'attr':{'placeholder':"votre email ..."}})}}</p>
+  <p>{{ form_row ( vueFormulaireUser.password,{'attr':{'placeholder':"votre mot de passe ..."}})}}</p>
+    <button type="submit"> s'inscrire </button>
+{{ form_end ( vueFormulaireUser )}}
+</center>
+{% endblock %}

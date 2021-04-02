@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<h1> Cette page affichera la liste des stages </h1>
+{% set debutNouvelleLigne = true %}
+
+<table>
+    {% for stage in stages %}
+    <tr>
+      <td><a class="stage" href="{{ path('descriptionStage',{'id': stage.id}) }}">{{stage.intitule}}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1> Cette page affichera la liste des entreprises proposant un stage </h1>
+
+<ul>
+  {% for stage in stages %}
+    <li><p><a class="entreprise" href="{{ path('stagesParEntreprise',{'nomEntreprise': stage.entreprises.nom}) }}">{{stage.entreprises.nom}}</a> (<a class="modifEntreprise" href="{{ path('modifierEntreprise',{'id': stage.entreprises.id}) }}">modifier</a>)<p/></li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

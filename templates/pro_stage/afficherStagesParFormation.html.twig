@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<table>
+{% for stage in stages %}
+  <tr>
+    <td>{{stage.intitule}}</td>
+  </tr>
+{% endfor %}
+</table>
+{% endblock %}
